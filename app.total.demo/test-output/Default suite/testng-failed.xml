@@ -6,6 +6,7 @@
       <class name="test.horoscope.Total_horoscope">
         <methods>
           <include name="openingRechargeApp"/>
+          <include name="kundaliMatch"/>
           <include name="appLaunch"/>
         </methods>
       </class> <!-- test.horoscope.Total_horoscope -->

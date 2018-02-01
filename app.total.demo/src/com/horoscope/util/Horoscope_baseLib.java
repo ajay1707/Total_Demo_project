@@ -2,6 +2,7 @@ package com.horoscope.util;
 
 import com.handlingSSO.PO.Handling_SSO_PO;
 import com.horoscope.PO.*;
+import com.recharge.PO.RechargeDemo_PO;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +20,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.html5.RemoteApplicationCache;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -116,6 +118,12 @@ public class Horoscope_baseLib
 	{
 		(driver).pressKeyCode(AndroidKeyCode.BACK);
 	}
+	public static void homeButton(AndroidDriver<WebElement> driver)
+	{
+		(driver).pressKeyCode(AndroidKeyCode.HOME);
+	}
+	
+	
 
 	public static void handlingLauncherPopUp(WebDriver driver) throws Exception
 	{
@@ -472,7 +480,58 @@ public class Horoscope_baseLib
 				}
 	}
 
-	
+	public static void performingRecharge(AndroidDriver<WebElement> driver,String Number,String amount) throws Exception
+	{		
+			RechargeDemo_PO rechargeDemo_PO = new RechargeDemo_PO(driver);
+			WebDriverWait wait = new WebDriverWait(driver,5);
+			appDrawerApp(driver, "Recharge");
+			
+			rechargeDemo_PO.mobileNumberfield().clear();
+			rechargeDemo_PO.mobileNumberfield().sendKeys(Number);
+			rechargeDemo_PO.selectOperator().click();
+			wait.until
+			(ExpectedConditions.visibilityOfElementLocated
+					(By.xpath("//android.view.ViewGroup")));
+			
+			rechargeDemo_PO.operatorSelect().click();
+			wait.until
+			(ExpectedConditions.visibilityOfElementLocated
+					(By.xpath("//android.view.ViewGroup")));
+			
+			rechargeDemo_PO.circleSelect().click();
+			rechargeDemo_PO.amountField().clear();
+			rechargeDemo_PO.amountField().sendKeys(amount);
+			
+			rechargeDemo_PO.rechargeButton().click();
+			wait.until
+			(ExpectedConditions.visibilityOfElementLocated
+					(By.xpath("//android.view.ViewGroup")));
+			wait.until
+			(ExpectedConditions.visibilityOfElementLocated
+					(By.xpath("//android.view.ViewGroup")));
+			
+			WebElement element = driver.findElement(By.xpath("//android.view.ViewGroup[@index=4]/android.view.ViewGroup[@index=0]")); 
+			boolean actual = element.isDisplayed();
+			String rechrgeStatus1 = "Recharge successful";
+			String rechrgeStatus2 = driver.findElement(By.xpath("//android.view.ViewGroup[@index=0]/android.widget.TextView")).getText();
+			
+			(driver).pressKeyCode(AndroidKeyCode.HOME);
+			
+			Assert.assertEquals(rechrgeStatus2, rechrgeStatus1);
+			
+			//for consideration
+			
+			//click on the browse plans
+			//driver.findElement(By.xpath("//android.view.ViewGroup[@index=6]/android.view.ViewGroup[@index=2]/android.widget.TextView[@text='Browse Plans']")).click();
+			//wait.until
+			//(ExpectedConditions.visibilityOfElementLocated
+			//		(By.xpath("//android.view.ViewGroup")));
+			//click on one of the plan
+			//driver.findElement(By.xpath("//android.widget.ScrollView[@index=0]/android.view.ViewGroup[@index=0]/android.view.ViewGroup[@index=0]")).click();
+			//wait.until
+			//(ExpectedConditions.visibilityOfElementLocated
+			//		(By.xpath("//android.view.ViewGroup")));
+	}
 	
 	
 	
