@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/java-client-5.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/selenium-server-standalone-3.7.1.jar" sourcepath="/Appium/jar/selenium-server-standalone-3.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tess4J-3.4.2-src/Tess4J/dist/tess4j-3.4.2.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/sample1/selenium-java-3.7.1.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
