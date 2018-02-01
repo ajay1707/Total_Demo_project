@@ -47,7 +47,7 @@ public class Total_horoscope extends Horoscope_baseLib
 	{
 		log.info("performing recharge");
 		performingRecharge(driver,"9781909676","06");	
-		// performing
+		// performing the recharge
 	}
 
 
