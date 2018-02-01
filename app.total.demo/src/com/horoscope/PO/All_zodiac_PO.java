@@ -19,6 +19,7 @@ import test.horoscope.Total_horoscope;
 public class All_zodiac_PO {
 
 	AppiumDriver driver;
+	// the driver
 
 
 	public All_zodiac_PO(AppiumDriver driver) 
