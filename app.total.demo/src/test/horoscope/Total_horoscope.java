@@ -25,14 +25,14 @@ public class Total_horoscope extends Horoscope_baseLib
 	static Logger log = Logger.getLogger(Total_horoscope.class.getName());
 
 
-/*
+
 	@Test(priority=1,description="code for handling the creo laucher activity")
 	public static void handlingLauncher() throws Exception
 	{
 		handlingLauncherPopUp(driver);
 		log.info("Launcher activity is handled");
 	}
-*/
+
 /*
 	@Test(priority=3,description="Handling SSO")
 	public static void handlingSSOlogin() throws Exception
@@ -41,15 +41,15 @@ public class Total_horoscope extends Horoscope_baseLib
 		log.info("Launcher activity is handled");
 	}
 */
-	
+/*	
 	@Test(priority=2,description="performing the Recharge")
 	public static void openingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
-		performingRecharge(driver,"9781909676","06");	
+		performingRecharge(driver,"9781909676","20");	
 		// performing
 	}
-
+*/
 
 
 	@Test(priority=3,description="Launch Horoscope from the App drawer")
@@ -96,7 +96,7 @@ public class Total_horoscope extends Horoscope_baseLib
 			//e.printStackTrace();
 		}	
 	}
-
+/*
 	@Test(priority=5,description="click on setting (change DOB) icon")
 	public static void DOBsetting()
 	{
@@ -183,7 +183,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		all_zodiac_PO.Pisces().click();
 		Horoscope_baseLib.allZodiacSoftAssert(driver, "Pisces", all_zodiac_PO);
 	}
-
+*/
 
 
 
@@ -227,12 +227,16 @@ public class Total_horoscope extends Horoscope_baseLib
 
 		List <WebElement> dropDownPathFemale=driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='26']/android.widget.TextView"));
 		handlingDynamicDropDown(driver, dropDownPathFemale, "Gursarai");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.EditText")));
+		/*wait.until
+		(ExpectedConditions.visibilityOfElementLocated
+				(By.xpath("//android.view.ViewGroup")));*/
+		
+		//wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.EditText")));
 		kundali_match_PO.save_button().click();
 		wait.until
 		(ExpectedConditions.visibilityOfElementLocated
 				(By.xpath("//android.view.ViewGroup")));
-		backButton(driver);
+		homeButton(driver);
 	}
 
 }

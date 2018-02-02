@@ -5,9 +5,8 @@
     <classes>
       <class name="test.horoscope.Total_horoscope">
         <methods>
-          <include name="openingRechargeApp"/>
-          <include name="kundaliMatch"/>
           <include name="appLaunch"/>
+          <include name="myZodiacTab"/>
         </methods>
       </class> <!-- test.horoscope.Total_horoscope -->
     </classes>
