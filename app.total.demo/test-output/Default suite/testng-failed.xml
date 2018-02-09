@@ -5,7 +5,24 @@
     <classes>
       <class name="test.horoscope.Total_horoscope">
         <methods>
+          <include name="saggitariusDisplayed"/>
+          <include name="kundaliMatch"/>
+          <include name="cancerDataDisplayed"/>
+          <include name="libraDataDisplayed"/>
+          <include name="scorpioDataDisplayed"/>
+          <include name="aquariusDataDisplayed"/>
+          <include name="piscesDataDisplayed"/>
+          <include name="DOBsetting"/>
+          <include name="LaunchingFromAppDrawer"/>
+          <include name="leoDataDisplayed"/>
+          <include name="ariesDataDisplayed"/>
+          <include name="geminiDataDisplayed"/>
+          <include name="performingRechargeApp"/>
+          <include name="taurusDataDisplayed"/>
           <include name="appLaunch"/>
+          <include name="capricornDataDisplayed"/>
+          <include name="virgoDataDisplayed"/>
+          <include name="allZodiacTabSelect"/>
           <include name="myZodiacTab"/>
         </methods>
       </class> <!-- test.horoscope.Total_horoscope -->

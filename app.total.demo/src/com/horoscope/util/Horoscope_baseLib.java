@@ -82,13 +82,13 @@ public class Horoscope_baseLib
 		capabilities.setCapability(MobileCapabilityType.PLATFORM,Horoscope_GenericLib.readConfigPropFile(sPropFileName, "PLATFORMNAME"));
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,Horoscope_GenericLib.readConfigPropFile(sPropFileName, "DeviceName"));
 		capabilities.setCapability(MobileCapabilityType.VERSION,Horoscope_GenericLib.readConfigPropFile(sPropFileName, "PLATFORMVERSION"));
-		capabilities.setCapability("appPackage", Horoscope_GenericLib.readConfigPropFile(sPropFileName, "packageName"));
-		capabilities.setCapability("appActivity",Horoscope_GenericLib.readConfigPropFile(sPropFileName, "activityName"));
-/*
+//		capabilities.setCapability("appPackage", Horoscope_GenericLib.readConfigPropFile(sPropFileName, "packageName"));
+//		capabilities.setCapability("appActivity",Horoscope_GenericLib.readConfigPropFile(sPropFileName, "activityName"));
+
 		// for testing
 		capabilities.setCapability("appPackage", "in.amazon.mShop.android.shopping");
-		capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");;
-*/
+		capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
+
 
 		URL url= new URL("http://0.0.0.0:4723/wd/hub");
 		driver = new AndroidDriver<WebElement>(url, capabilities);
@@ -151,6 +151,7 @@ public class Horoscope_baseLib
 	}
 
 	//	Launch from -1 screen 
+	//	reconsider
 	public static void lauchFromPillScreen(AppiumDriver<WebElement> driver,String appName)		
 	{	
 		pillScreen_PO pillScreen_PO=new pillScreen_PO((AppiumDriver<WebElement>) driver);
@@ -276,16 +277,16 @@ public class Horoscope_baseLib
 		wait.until
 		(ExpectedConditions.visibilityOfElementLocated
 				(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup/android.widget.TextView")));
-				
+		//backButton(driver);		
 		List<WebElement> locations = dropDownPath;
 		//System.out.println(locations.size());
 
 		for(int i=0;i<locations.size();i++){
 			WebElement option = locations.get(i);
 			String city=option.getText();
-			//System.out.println("cities suggested is "  +city);
+			System.out.println("cities suggested is "  +city);
 			if(city.contentEquals(cityName)) {
-				driver.pressKeyCode(AndroidKeyCode.BACK);
+			backButton(driver);
 				option.click();
 				//System.out.println("value from drop down is " +option);
 				break;
@@ -309,17 +310,19 @@ public class Horoscope_baseLib
 
 		for(int i = 0;i<applications.size();i++)
 		{	
-			WebDriverWait wait = new WebDriverWait(driver,3);
+			WebDriverWait wait = new WebDriverWait(driver,5);
 			WebElement app_element = applications.get(i);
 			String app_name=app_element.getText();
 			System.out.println(app_name);
 			if(app_name.contentEquals(app_Name))
 			{
 				app_element.click();
-				wait.until
-				(ExpectedConditions.visibilityOfElementLocated
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				// this code need to be generallized
+				/*wait.until
+			(ExpectedConditions.visibilityOfElementLocated
 						(By.xpath("//android.view.ViewGroup")));
-				// handling very first time
+				*/// handling very first time
 
 				try {
 					my_Zodiac_PO my_Zodiac_PO=new my_Zodiac_PO(driver);
@@ -351,7 +354,7 @@ public class Horoscope_baseLib
 			WebDriverWait wait = new WebDriverWait(driver,3);
 			//touchAction.longPress(10,1200).moveTo(10, 10).release().perform();
 			//this has to be generalised
-			touchAction.longPress(10 ,600).moveTo(10, 10).release().perform();
+			touchAction.longPress(10 ,750).moveTo(10, 10).release().perform();
 			List<WebElement> applications_1 = driver.findElements(By.xpath("//android.support.v7.widget.RecyclerView/android.widget.TextView"));
 			System.out.println(applications_1.size());
 
@@ -363,13 +366,14 @@ public class Horoscope_baseLib
 				if(app_name.contentEquals(app_Name))
 				{
 					app_element.click();
-					wait.until
+					//****THIS WE HABE TO GENERALIZE DEPENDING UPON THE UIz
+					/*wait.until
 					(ExpectedConditions.visibilityOfElementLocated
-							(By.xpath("//android.view.ViewGroup")));
+							(By.xpath("//android.view.ViewGroup")));*/
 					status = true;
 					break;
 				}
-				System.out.println(status);
+				//System.out.println(status);
 			}
 		}	
 	}
@@ -461,32 +465,87 @@ public class Horoscope_baseLib
 		}
 		(driver).pressKeyCode(AndroidKeyCode.BACK);		
 	}
-
+	
+	
+	//handling SSO (account reconsider)
 	public static void handlingSSO(AndroidDriver<WebElement> driver) throws Exception
 	{		
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		boolean status = false;
+		
+		// this code is for removal of account from the settings
+		
 		Handling_SSO_PO handling_SSO_PO = new Handling_SSO_PO(driver);
-		//handling_SSO_PO.appDrawer().click();
 		appDrawerApp(driver, "Settings");
 
 		touchAction = new TouchAction((PerformsTouchActions) driver);
-		touchAction.longPress(200 ,750).moveTo(200,150).release().perform();
-
-		for(int i=0;i<=2;i++)
+		touchAction.longPress(200 ,750).moveTo(200,50).release().perform();
+		
+		for (int i = 0;i<=5;i++)
 		{
-			if(handling_SSO_PO.accountsOption().isDisplayed())
+		try {
+			status = handling_SSO_PO.accountsOption().isDisplayed();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			if(status)
 			{
-				handling_SSO_PO.accountsOption().click();			
+				handling_SSO_PO.accountsOption().click();	
+				break;
 			}else
 			{
 				touchAction.longPress(200 ,750).moveTo(200,150).release().perform();
 			}
 		}
+		//account click
+		driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView[@text='TOTAL built by hike']")).click();
+		//three dots click
+		driver.findElement(By.xpath("//android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout")).click();
+		//click on remove account
+		driver.findElement(By.xpath("//android.widget.ListView/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView[@text='Remove account']")).click();
+		// click on remove account dialog box
+		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[@text='REMOVE ACCOUNT']")).click();
+		
+		wait.until
+		(ExpectedConditions.visibilityOfElementLocated
+				(By.xpath("//android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='OK']")));
+		// click on the ok button of the dialog box
+		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='OK']")).click();
+		
+		homeButton(driver);
+		
+		//log in to the hike
+		appDrawerApp(driver, "hike");
+		//click on the sign in
+		wait.until
+		(ExpectedConditions.visibilityOfElementLocated
+				(By.xpath("//android.widget.LinearLayout")));
+		//click on the sign in button
+		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='SIGN IN']")).click();
+		//driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='SIGN IN']")).click();
+		//click on the confirm
+		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='CONFIRM']")).click();
+		
+		wait.until
+		(ExpectedConditions.visibilityOfElementLocated
+				(By.xpath("//android.widget.RelativeLayout/android.widget.TextView[@text='ADD FRIENDS']")));
+		
+		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.support.v7.widget.LinearLayoutCompat/android.widget.TextView[@text='SKIP']")).click();
+		
+		
 	}
 
+	
+	
+	
+	
+	
+	
 	public static void performingRecharge(AndroidDriver<WebElement> driver,String Number,String amount) throws Exception
 	{		
 		RechargeDemo_PO rechargeDemo_PO = new RechargeDemo_PO(driver);
-		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebDriverWait wait = new WebDriverWait(driver,10);
 		appDrawerApp(driver, "Recharge");
 
 		rechargeDemo_PO.mobileNumberfield().clear();
@@ -540,9 +599,57 @@ public class Horoscope_baseLib
 	}
 
 
+	public static void kundaliMatchHoroscope(AndroidDriver<WebElement> driver) throws Exception
 
+	{
+		
+				//excel sheet integration can be done in this code
+				WebDriverWait wait = new WebDriverWait(driver,5);
+				Kundali_match_PO kundali_match_PO=new Kundali_match_PO(driver);
+				kundali_match_PO.tab_Kundali().click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 
+				kundali_match_PO.male_Name().sendKeys("Ajay singh");
+				enterButton(driver);
+				kundali_match_PO.male_DOB_dd().sendKeys("17");
+				kundali_match_PO.male_DOB_mm().sendKeys("01");
+				kundali_match_PO.male_DOB_yyyy().sendKeys("2017");
+				kundali_match_PO.male_DOB_hr().sendKeys("11");
+				kundali_match_PO.male_DOB_min().sendKeys("22");
+				kundali_match_PO.male_cityname().sendKeys("gur");
 
+				List<WebElement> dropdownPath = driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='13']/android.widget.TextView"));
+				handlingDynamicDropDown(driver, dropdownPath, "Gursarai");
+
+				kundali_match_PO.f_name.sendKeys("raman");
+				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				enterButton(driver);
+
+				kundali_match_PO.female_DOB_dd().sendKeys("17");
+				kundali_match_PO.female_DOB_mm().sendKeys("01");
+				kundali_match_PO.female_DOB_yyyy().sendKeys("1997");
+				kundali_match_PO.female_DOB_hr().sendKeys("11");
+				kundali_match_PO.female_DOB_min().sendKeys("34");
+
+				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+				nextButton(driver);
+				kundali_match_PO.f_cityname.sendKeys("gur");
+				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
+
+				List <WebElement> dropDownPathFemale=driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='26']/android.widget.TextView"));
+				handlingDynamicDropDown(driver, dropDownPathFemale, "Gursarai");
+				/*wait.until
+				(ExpectedConditions.visibilityOfElementLocated
+						(By.xpath("//android.view.ViewGroup")));*/
+				
+				//wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.EditText")));
+				kundali_match_PO.save_button().click();
+				wait.until
+				(ExpectedConditions.visibilityOfElementLocated
+						(By.xpath("//android.view.ViewGroup")));
+				homeButton(driver);
+	}
 
 
 

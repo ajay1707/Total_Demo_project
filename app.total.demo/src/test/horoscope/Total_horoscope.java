@@ -25,14 +25,25 @@ public class Total_horoscope extends Horoscope_baseLib
 	static Logger log = Logger.getLogger(Total_horoscope.class.getName());
 
 
+	
+	@Test(priority=1,description="code for handling the creo laucher activity")
+	public static void handlingLauncher() throws Exception
+	{
+		handlingSSO(driver);
+		log.info("Launcher activity is handled");
+	}
 
+	
+	
+	
+/*
 	@Test(priority=1,description="code for handling the creo laucher activity")
 	public static void handlingLauncher() throws Exception
 	{
 		handlingLauncherPopUp(driver);
 		log.info("Launcher activity is handled");
 	}
-
+*/
 /*
 	@Test(priority=3,description="Handling SSO")
 	public static void handlingSSOlogin() throws Exception
@@ -41,15 +52,15 @@ public class Total_horoscope extends Horoscope_baseLib
 		log.info("Launcher activity is handled");
 	}
 */
-/*	
+	
 	@Test(priority=2,description="performing the Recharge")
-	public static void openingRechargeApp() throws Exception
+	public static void performingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
-		performingRecharge(driver,"9781909676","20");	
+		performingRecharge(driver,"9781909676","04");	
 		// performing
 	}
-*/
+
 
 
 	@Test(priority=3,description="Launch Horoscope from the App drawer")
@@ -96,7 +107,7 @@ public class Total_horoscope extends Horoscope_baseLib
 			//e.printStackTrace();
 		}	
 	}
-/*
+
 	@Test(priority=5,description="click on setting (change DOB) icon")
 	public static void DOBsetting()
 	{
@@ -183,60 +194,16 @@ public class Total_horoscope extends Horoscope_baseLib
 		all_zodiac_PO.Pisces().click();
 		Horoscope_baseLib.allZodiacSoftAssert(driver, "Pisces", all_zodiac_PO);
 	}
-*/
+
 
 
 
 	@Test(priority=17,description="KUNDALI MATCH ")
-	public static void kundaliMatch()
+	public static void kundaliMatch() throws Exception
 	{	
-
-		//excel sheet integration can be done in this code
-		WebDriverWait wait = new WebDriverWait(driver,5);
-		Kundali_match_PO kundali_match_PO=new Kundali_match_PO(driver);
-		kundali_match_PO.tab_Kundali().click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
-
-		kundali_match_PO.male_Name().sendKeys("Ajay singh");
-		enterButton(driver);
-		kundali_match_PO.male_DOB_dd().sendKeys("17");
-		kundali_match_PO.male_DOB_mm().sendKeys("01");
-		kundali_match_PO.male_DOB_yyyy().sendKeys("2017");
-		kundali_match_PO.male_DOB_hr().sendKeys("11");
-		kundali_match_PO.male_DOB_min().sendKeys("22");
-		kundali_match_PO.male_cityname().sendKeys("gur");
-
-		List<WebElement> dropdownPath = driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='13']/android.widget.TextView"));
-		handlingDynamicDropDown(driver, dropdownPath, "Gursarai");
-
-		kundali_match_PO.f_name.sendKeys("raman");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		enterButton(driver);
-
-		kundali_match_PO.female_DOB_dd().sendKeys("17");
-		kundali_match_PO.female_DOB_mm().sendKeys("01");
-		kundali_match_PO.female_DOB_yyyy().sendKeys("1997");
-		kundali_match_PO.female_DOB_hr().sendKeys("11");
-		kundali_match_PO.female_DOB_min().sendKeys("34");
-
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-		nextButton(driver);
-		kundali_match_PO.f_cityname.sendKeys("gur");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
-
-		List <WebElement> dropDownPathFemale=driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='26']/android.widget.TextView"));
-		handlingDynamicDropDown(driver, dropDownPathFemale, "Gursarai");
-		/*wait.until
-		(ExpectedConditions.visibilityOfElementLocated
-				(By.xpath("//android.view.ViewGroup")));*/
 		
-		//wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.EditText")));
-		kundali_match_PO.save_button().click();
-		wait.until
-		(ExpectedConditions.visibilityOfElementLocated
-				(By.xpath("//android.view.ViewGroup")));
-		homeButton(driver);
+		kundaliMatchHoroscope(driver);
+		
 	}
 
 }
