@@ -57,7 +57,10 @@ public class Total_horoscope extends Horoscope_baseLib
 	public static void performingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
+
 		performingRecharge(driver,"9781909676","04");	
+	
+		
 		// performing
 	}
 
