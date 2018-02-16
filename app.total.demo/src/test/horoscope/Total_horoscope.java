@@ -1,6 +1,6 @@
 package test.horoscope;
 import static com.horoscope.util.Horoscope_baseLib.touchAction;
-
+import com.horoscope.util.Horoscope_GenericLib;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 import java.util.List;
@@ -189,7 +189,7 @@ public class Total_horoscope extends Horoscope_baseLib
 
 
 	@Test(priority=17,description="KUNDALI MATCH ")
-	public static void kundaliMatch()
+	public static void kundaliMatch() throws Exception
 	{	
 
 		//excel sheet integration can be done in this code
@@ -198,7 +198,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		kundali_match_PO.tab_Kundali().click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 
-		kundali_match_PO.male_Name().sendKeys("Ajay singh");
+		kundali_match_PO.male_Name().sendKeys(Horoscope_GenericLib.readExcelData());
 		enterButton(driver);
 		kundali_match_PO.male_DOB_dd().sendKeys("17");
 		kundali_match_PO.male_DOB_mm().sendKeys("01");
