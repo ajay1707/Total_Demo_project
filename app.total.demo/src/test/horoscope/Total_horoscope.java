@@ -26,10 +26,10 @@ public class Total_horoscope extends Horoscope_baseLib
 
 
 	
-	@Test(priority=1,description="code for handling the creo laucher activity")
+	@Test(priority=51,description="code for handling the creo laucher activity")
 	public static void handlingLauncher() throws Exception
 	{
-		handlingSSO(driver);
+		SSOgateLogIn(driver);
 		log.info("Launcher activity is handled");
 	}
 
@@ -53,11 +53,10 @@ public class Total_horoscope extends Horoscope_baseLib
 	}
 */
 	
-	@Test(priority=2,description="performing the Recharge")
+	@Test(priority=52,description="performing the Recharge")
 	public static void performingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
-
 		performingRecharge(driver,"9781909676","04");	
 	
 		
@@ -66,10 +65,20 @@ public class Total_horoscope extends Horoscope_baseLib
 
 
 
-	@Test(priority=3,description="Launch Horoscope from the App drawer")
+	@Test(priority=1,description="Launch Horoscope from the App drawer")
 	public static void LaunchingFromAppDrawer() throws Exception
 	{
 		appDrawerApp(driver, "Horoscope");
+		
+		// checking the SSO handling
+		// need to check when this web element is not visible
+		WebElement sample1 = driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign in to TOTAL to start using to all hike Services!']"));
+		boolean status = sample1.isDisplayed();
+		if(status)
+		{
+			SSOgateLogIn(driver);
+		}
+		
 	}
 
 /*

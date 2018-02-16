@@ -61,11 +61,6 @@ public class Horoscope_baseLib
 	static public String sPropFileName = sDirPath+"\\configProperties.properties";
 
 
-	//cross check
-	//Handling_launcher_PO handling_launcher_PO=new Handling_launcher_PO(driver);
-
-
-
 	//*****************************setting up the capabilities*******************************
 
 	@BeforeClass
@@ -98,30 +93,41 @@ public class Horoscope_baseLib
 		backButton(driver);
 
 		// in.amazon.mShop.android.shopping
-		//	com.amazon.mShop.sso.SigninPromptActivity
-
+		//	com.amazon.mShop.sso.SigninPromptActivit
 	}
 
+	
 	//*******************************METHODS**************************************//
 
+	//*******************************Enter Button**************************************//
+	
 	public static void enterButton(AndroidDriver<WebElement> driver)
 	{
 		driver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
+	
+	//*******************************Next Button**************************************//
+	
 	public static void nextButton(AndroidDriver<WebElement> driver)
 	{
 		driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_NEXT);
 	}
+	
+	//*******************************Back Button**************************************//
+	
 	public static void backButton(AndroidDriver<WebElement> driver)
 	{
 		(driver).pressKeyCode(AndroidKeyCode.BACK);
 	}
+	
+	//*******************************Home Button**************************************//
+	
 	public static void homeButton(AndroidDriver<WebElement> driver)
 	{
 		(driver).pressKeyCode(AndroidKeyCode.HOME);
 	}
 
-
+	//*******************************Handling the Launcher Onboarding**************************************//
 
 	public static void handlingLauncherPopUp(WebDriver driver) throws Exception
 	{
@@ -150,8 +156,8 @@ public class Horoscope_baseLib
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 	}
 
-	//	Launch from -1 screen 
-	//	reconsider
+	//*******************************Launch from the -1 screen (under work)**************************************//
+	
 	public static void lauchFromPillScreen(AppiumDriver<WebElement> driver,String appName)		
 	{	
 		pillScreen_PO pillScreen_PO=new pillScreen_PO((AppiumDriver<WebElement>) driver);
@@ -196,8 +202,9 @@ public class Horoscope_baseLib
 		}
 
 	}
-	//change DOB from my Zodiac
-	// VALUE CHECK NEED TO BE ADDED
+
+	//*******************************CHANGE THE DATE OF BIRTH**************************************//
+	
 	public static void changeDobmyZodiac(AndroidDriver<WebElement> driver,String date,String month,String year)			
 	{	
 		change_date_PO DOB = new change_date_PO(driver);
@@ -207,7 +214,9 @@ public class Horoscope_baseLib
 		backButton(driver);
 		DOB.save_MZ().click();
 	}	
-	// change very first time DOB
+	
+	//*******************************CHANGE THE DATE OF BIRTH (VERY FIRST TIME)**************************************//
+	
 	public static void changeVeryFirstDob(AndroidDriver<WebElement> driver,String date,String month,String year)			
 	{	
 		change_date_PO DOB = new change_date_PO(driver);
@@ -219,7 +228,8 @@ public class Horoscope_baseLib
 		my_Zodiac_PO.Save_myZodiac.click();
 	}
 
-	//change DOB from setting
+	//*******************************CHANGE THE DATE OF BIRTH**************************************//
+	
 	public static void changeDOBsetting(AndroidDriver<WebElement> driver,String date,String month,String year)			
 	{
 		change_date_PO DOB = new change_date_PO(driver);
@@ -238,7 +248,8 @@ public class Horoscope_baseLib
 
 	}
 
-	//test.horoscope lauch from laucher
+	//*******************************CLICK ON THE HOROSCOPE ICON FROM LAUNCHER**************************************//
+	
 	public static void horoscopeLaucherclick(AndroidDriver<WebElement> driver)		
 	{	
 		my_Zodiac_PO my_Zodiac_PO=new my_Zodiac_PO(driver);
@@ -270,7 +281,8 @@ public class Horoscope_baseLib
 		}
 	}
 
-	// Handling Dynaic Drop Down
+	//*******************************METHOD FOR HANDLING THE DYNAMIC DROP DOWN**************************************//
+	
 	public static void handlingDynamicDropDown(AndroidDriver<WebElement> driver,List<WebElement> dropDownPath,String cityName)			
 	{	
 		WebDriverWait wait = new WebDriverWait(driver,5);
@@ -291,11 +303,11 @@ public class Horoscope_baseLib
 				//System.out.println("value from drop down is " +option);
 				break;
 			}
-			//System.out.println("value from drop down is "   +city);
 		}
 	}
 
-	// click from the app drawer
+	//*******************************METHOD FOR LAUNCHING THE APP FROM THE APP DRAWER**************************************//
+	
 	public static void appDrawerApp(AndroidDriver<WebElement> driver,String appName)			
 	{	
 
@@ -378,7 +390,8 @@ public class Horoscope_baseLib
 		}	
 	}
 
-	// Read Toast message
+	//*******************************METHOD FOR READING THE TOAST MESSAGE (UNDER CONSTRUCTION)**************************************//
+	
 	public  static String readToastMessage(AndroidDriver<WebElement> driver) throws Exception
 	{	
 		String imgName = takeScreenshot(driver);
@@ -395,6 +408,8 @@ public class Horoscope_baseLib
 		return result;	
 	}
 
+	//*******************************METHOD FOR TAKING THE SCREEN SHOT**************************************//
+	
 	public static String takeScreenshot(AndroidDriver<WebElement> driver)
 	{	
 		File scrfile= driver.getScreenshotAs(OutputType.FILE);
@@ -415,7 +430,8 @@ public class Horoscope_baseLib
 
 	}
 
-	// Assert code for all zodiac tab
+	//*******************************METHOD FOR CHECKING THE ZODIAC DATA CAN BE DISPLAYED OR NOT(CAN BE GENERALISED)**************************************//
+	
 	public static void allZodiacSoftAssert(AndroidDriver<WebElement> driver,String zodiac_name, All_zodiac_PO all_zodiac_PO) throws Exception
 	{		
 
@@ -442,7 +458,8 @@ public class Horoscope_baseLib
 		Assert.assertEquals(actualDisplayed, true ,zodiac_name+"	data is not displayed");
 	}
 
-	// waiting for the zodiac data to get displayed 
+	//*******************************METHOD FOR CHECKING THE ZODIAC DATA CAN BE DISPLAYED OR NOT(CAN BE GENERALISED)**************************************//
+	
 	public static void waitForZodiacData(AndroidDriver<WebElement> driver) throws Exception
 	{		
 		All_zodiac_PO all_zodiac_PO=new All_zodiac_PO(driver);
@@ -466,12 +483,13 @@ public class Horoscope_baseLib
 		(driver).pressKeyCode(AndroidKeyCode.BACK);		
 	}
 	
+	//*******************************DELETING THE HIKE ACCOUNT FROM THE SETTINGS(UNDER CONSTRUCTION)**************************************//
 	
-	//handling SSO (account reconsider)
-	public static void handlingSSO(AndroidDriver<WebElement> driver) throws Exception
+	public static void deleteHikeFromSetting(AndroidDriver<WebElement> driver) throws Exception
 	{		
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(driver,15);
 		boolean status = false;
+		homeButton(driver);
 		
 		// this code is for removal of account from the settings
 		
@@ -521,9 +539,16 @@ public class Horoscope_baseLib
 		wait.until
 		(ExpectedConditions.visibilityOfElementLocated
 				(By.xpath("//android.widget.LinearLayout")));
+	}
+		
+	//*******************************HANDLING THE SSO GATEWAY LOG IN**************************************//
+	
+	public static void SSOgateLogIn(AndroidDriver<WebElement> driver) throws Exception	
+	{
+	
+		WebDriverWait wait = new WebDriverWait(driver,10);
 		//click on the sign in button
 		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='SIGN IN']")).click();
-		//driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='SIGN IN']")).click();
 		//click on the confirm
 		driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.Button[@text='CONFIRM']")).click();
 		
@@ -531,16 +556,10 @@ public class Horoscope_baseLib
 		(ExpectedConditions.visibilityOfElementLocated
 				(By.xpath("//android.widget.RelativeLayout/android.widget.TextView[@text='ADD FRIENDS']")));
 		
-		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.support.v7.widget.LinearLayoutCompat/android.widget.TextView[@text='SKIP']")).click();
-		
-		
+		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.support.v7.widget.LinearLayoutCompat/android.widget.TextView[@text='SKIP']")).click();	
 	}
-
 	
-	
-	
-	
-	
+	//*******************************POSITIVE FLOW FOR RECHARGEW APP**************************************//
 	
 	public static void performingRecharge(AndroidDriver<WebElement> driver,String Number,String amount) throws Exception
 	{		
@@ -598,12 +617,13 @@ public class Horoscope_baseLib
 		//		(By.xpath("//android.view.ViewGroup")));
 	}
 
-
+	//*******************************PERFORMING THE KUNDALI MATCH**************************************//
+	
 	public static void kundaliMatchHoroscope(AndroidDriver<WebElement> driver) throws Exception
 
 	{
 		
-				//excel sheet integration can be done in this code
+				////excel sheet integration can be done in this code
 				WebDriverWait wait = new WebDriverWait(driver,5);
 				Kundali_match_PO kundali_match_PO=new Kundali_match_PO(driver);
 				kundali_match_PO.tab_Kundali().click();

@@ -13,6 +13,7 @@
           <include name="aquariusDataDisplayed"/>
           <include name="piscesDataDisplayed"/>
           <include name="DOBsetting"/>
+          <include name="handlingLauncher"/>
           <include name="LaunchingFromAppDrawer"/>
           <include name="leoDataDisplayed"/>
           <include name="ariesDataDisplayed"/>
