@@ -25,7 +25,7 @@ public class Total_horoscope extends Horoscope_baseLib
 	static Logger log = Logger.getLogger(Total_horoscope.class.getName());
 
 
-	
+/*	
 	@Test(priority=51,description="code for handling the creo laucher activity")
 	public static void handlingLauncher() throws Exception
 	{
@@ -33,7 +33,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		log.info("Launcher activity is handled");
 	}
 
-	
+*/	
 	
 	
 /*
@@ -53,7 +53,7 @@ public class Total_horoscope extends Horoscope_baseLib
 	}
 */
 	
-	@Test(priority=52,description="performing the Recharge")
+/*	@Test(priority=52,description="performing the Recharge")
 	public static void performingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
@@ -63,7 +63,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		// performing
 	}
 
-
+*/
 
 	@Test(priority=1,description="Launch Horoscope from the App drawer")
 	public static void LaunchingFromAppDrawer() throws Exception
@@ -97,7 +97,7 @@ public class Total_horoscope extends Horoscope_baseLib
 	}
 */
 
-
+/*
 	// we need to reconsider the code
 	@Test(priority=4,description="click on My Zodiac tab")
 	public static void myZodiacTab()
@@ -207,7 +207,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		Horoscope_baseLib.allZodiacSoftAssert(driver, "Pisces", all_zodiac_PO);
 	}
 
-
+*/
 
 
 	@Test(priority=17,description="KUNDALI MATCH ")

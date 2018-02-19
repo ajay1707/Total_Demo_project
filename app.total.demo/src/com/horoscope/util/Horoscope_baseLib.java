@@ -629,14 +629,14 @@ public class Horoscope_baseLib
 				kundali_match_PO.tab_Kundali().click();
 				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 
-				kundali_match_PO.male_Name().sendKeys("Ajay singh");
+				kundali_match_PO.male_Name().sendKeys(Horoscope_GenericLib.readExcelData(2,2));
 				enterButton(driver);
-				kundali_match_PO.male_DOB_dd().sendKeys("17");
-				kundali_match_PO.male_DOB_mm().sendKeys("01");
-				kundali_match_PO.male_DOB_yyyy().sendKeys("2017");
-				kundali_match_PO.male_DOB_hr().sendKeys("11");
-				kundali_match_PO.male_DOB_min().sendKeys("22");
-				kundali_match_PO.male_cityname().sendKeys("gur");
+				kundali_match_PO.male_DOB_dd().sendKeys(Horoscope_GenericLib.readExcelData(3,2));
+				kundali_match_PO.male_DOB_mm().sendKeys(Horoscope_GenericLib.readExcelData(3,3));
+				kundali_match_PO.male_DOB_yyyy().sendKeys(Horoscope_GenericLib.readExcelData(3,4));
+				kundali_match_PO.male_DOB_hr().sendKeys(Horoscope_GenericLib.readExcelData(4,2));
+				kundali_match_PO.male_DOB_min().sendKeys(Horoscope_GenericLib.readExcelData(4,3));
+				kundali_match_PO.male_cityname().sendKeys(Horoscope_GenericLib.readExcelData(5,2));
 
 				List<WebElement> dropdownPath = driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='13']/android.widget.TextView"));
 				handlingDynamicDropDown(driver, dropdownPath, "Gursarai");

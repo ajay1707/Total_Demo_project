@@ -1,8 +1,12 @@
 package com.horoscope.util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
@@ -28,32 +32,18 @@ public class Horoscope_GenericLib {
 	}
 	
 	//To read data from excel sheet
-/*	public static String[] readDataFromExcel(String sheetName, String Tc_Id) throws EncryptedDocumentException, InvalidFormatException, IOException
-	{
-		String testdata[] = null;
+	
+	public static String readExcelData(int row,int column) throws Exception 
+	{ 
+		File source = new File("D:\\Selenium\\TestData.xlsx"); 
+		FileInputStream fis = new FileInputStream(source); 
+		XSSFWorkbook wb = new XSSFWorkbook(fis); 
+		XSSFSheet sheet1 = wb.getSheetAt(0); 
 		
-		FileInputStream fis = new FileInputStream(BaseLib.sExcelFileName);
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet s1 = wb.getSheet(sheetName);
-		int rowCount = s1.getLastRowNum();
-		int k=0;
-		for(int i =1; i<=rowCount; i++)
-		{
-			if(s1.getRow(i).getCell(k).getStringCellValue().equals(Tc_Id))
-			{
-				int CellCount = s1.getRow(i).getLastCellNum();
-				testdata = new String[CellCount];
-				for(int j=0; j<=CellCount;j++)
-				{
-					testdata[j] = s1.getRow(i).getCell(j).getStringCellValue();
-					
-				}	
-			}		
-			
-		}
-		return testdata;
+		String data0=sheet1.getRow(row).getCell(column).getStringCellValue();
+		System.out.println("data from the excel is " + data0); return data0; 
+		
 	}
-	*/
 	
 	
 }
