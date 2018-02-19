@@ -1,31 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="18" passed="16">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="188209" started-at="2018-02-01T15:54:26Z" finished-at="2018-02-01T15:57:35Z">
+  <suite name="Default suite" duration-ms="66114" started-at="2018-02-16T16:31:22Z" finished-at="2018-02-16T16:32:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="188209" started-at="2018-02-01T15:54:26Z" finished-at="2018-02-01T15:57:35Z">
+    <test name="Default test" duration-ms="66114" started-at="2018-02-16T16:31:22Z" finished-at="2018-02-16T16:32:28Z">
       <class name="test.horoscope.Total_horoscope">
-        <test-method status="PASS" signature="appLaunch()[pri:0, instance:test.horoscope.Total_horoscope@271053e1]" name="appLaunch" is-config="true" duration-ms="33294" started-at="2018-02-01T21:24:26Z" finished-at="2018-02-01T21:25:00Z">
+        <test-method status="PASS" signature="appLaunch()[pri:0, instance:test.horoscope.Total_horoscope@59494225]" name="appLaunch" is-config="true" duration-ms="40944" started-at="2018-02-16T22:01:22Z" finished-at="2018-02-16T22:02:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appLaunch -->
-        <test-method status="FAIL" signature="openingRechargeApp()[pri:2, instance:test.horoscope.Total_horoscope@271053e1]" name="openingRechargeApp" duration-ms="59111" started-at="2018-02-01T21:25:00Z" description="performing the Recharge" finished-at="2018-02-01T21:25:59Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="LaunchingFromAppDrawer()[pri:1, instance:test.horoscope.Total_horoscope@59494225]" name="LaunchingFromAppDrawer" duration-ms="16250" started-at="2018-02-16T22:02:03Z" description="Launch Horoscope from the App drawer" finished-at="2018-02-16T22:02:19Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Recharge successful] but found [Recharge failed]]]>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'AJAY', ip: '172.17.19.60', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android, databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID: 4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {}, webStorageEnabled: false}
+Session ID: b2765315-7eaa-4f36-b39d-0ad05a7cd215
+*** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign in to TOTAL to start using to all hike Services!']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Recharge successful] but found [Recharge failed]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.horoscope.util.Horoscope_baseLib.performingRecharge(Horoscope_baseLib.java:520)
-	at test.horoscope.Total_horoscope.openingRechargeApp(Total_horoscope.java:49)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'AJAY', ip: '172.17.19.60', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android, databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID: 4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {}, webStorageEnabled: false}
+Session ID: b2765315-7eaa-4f36-b39d-0ad05a7cd215
+*** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign in to TOTAL to start using to all hike Services!']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at test.horoscope.Total_horoscope.LaunchingFromAppDrawer(Total_horoscope.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,84 +90,23 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingRechargeApp -->
-        <test-method status="PASS" signature="LaunchingFromAppDrawer()[pri:3, instance:test.horoscope.Total_horoscope@271053e1]" name="LaunchingFromAppDrawer" duration-ms="12840" started-at="2018-02-01T21:25:59Z" description="Launch Horoscope from the App drawer" finished-at="2018-02-01T21:26:12Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchingFromAppDrawer -->
-        <test-method status="PASS" signature="myZodiacTab()[pri:4, instance:test.horoscope.Total_horoscope@271053e1]" name="myZodiacTab" duration-ms="14225" started-at="2018-02-01T21:26:12Z" description="click on My Zodiac tab" finished-at="2018-02-01T21:26:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myZodiacTab -->
-        <test-method status="PASS" signature="DOBsetting()[pri:5, instance:test.horoscope.Total_horoscope@271053e1]" name="DOBsetting" duration-ms="30096" started-at="2018-02-01T21:26:26Z" description="click on setting (change DOB) icon" finished-at="2018-02-01T21:26:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOBsetting -->
-        <test-method status="PASS" signature="allZodiacTabSelect()[pri:6, instance:test.horoscope.Total_horoscope@271053e1]" name="allZodiacTabSelect" duration-ms="944" started-at="2018-02-01T21:26:56Z" description="all zodiac tab select" finished-at="2018-02-01T21:26:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- allZodiacTabSelect -->
-        <test-method status="PASS" signature="ariesDataDisplayed()[pri:7, instance:test.horoscope.Total_horoscope@271053e1]" name="ariesDataDisplayed" duration-ms="2445" started-at="2018-02-01T21:26:57Z" description="ariesDataDisplayed" finished-at="2018-02-01T21:26:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ariesDataDisplayed -->
-        <test-method status="PASS" signature="cancerDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@271053e1]" name="cancerDataDisplayed" duration-ms="2620" started-at="2018-02-01T21:26:59Z" description="cancerDataDisplayed" finished-at="2018-02-01T21:27:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cancerDataDisplayed -->
-        <test-method status="PASS" signature="geminiDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@271053e1]" name="geminiDataDisplayed" duration-ms="2456" started-at="2018-02-01T21:27:02Z" description="geminiDataDisplayed" finished-at="2018-02-01T21:27:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- geminiDataDisplayed -->
-        <test-method status="PASS" signature="taurusDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@271053e1]" name="taurusDataDisplayed" duration-ms="2464" started-at="2018-02-01T21:27:05Z" description="taurusDataDisplayed" finished-at="2018-02-01T21:27:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- taurusDataDisplayed -->
-        <test-method status="PASS" signature="leoDataDisplayed()[pri:9, instance:test.horoscope.Total_horoscope@271053e1]" name="leoDataDisplayed" duration-ms="2580" started-at="2018-02-01T21:27:07Z" description="leoDataDisplayed" finished-at="2018-02-01T21:27:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- leoDataDisplayed -->
-        <test-method status="PASS" signature="virgoDataDisplayed()[pri:10, instance:test.horoscope.Total_horoscope@271053e1]" name="virgoDataDisplayed" duration-ms="2876" started-at="2018-02-01T21:27:10Z" description="virgoDataDisplayed" finished-at="2018-02-01T21:27:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- virgoDataDisplayed -->
-        <test-method status="PASS" signature="libraDataDisplayed()[pri:11, instance:test.horoscope.Total_horoscope@271053e1]" name="libraDataDisplayed" duration-ms="2509" started-at="2018-02-01T21:27:12Z" description="libraDataDisplayed" finished-at="2018-02-01T21:27:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- libraDataDisplayed -->
-        <test-method status="PASS" signature="scorpioDataDisplayed()[pri:12, instance:test.horoscope.Total_horoscope@271053e1]" name="scorpioDataDisplayed" duration-ms="2640" started-at="2018-02-01T21:27:15Z" description="scorpioDataDisplayed" finished-at="2018-02-01T21:27:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scorpioDataDisplayed -->
-        <test-method status="PASS" signature="saggitariusDisplayed()[pri:13, instance:test.horoscope.Total_horoscope@271053e1]" name="saggitariusDisplayed" duration-ms="2628" started-at="2018-02-01T21:27:18Z" description="saggitariusDisplayed" finished-at="2018-02-01T21:27:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- saggitariusDisplayed -->
-        <test-method status="PASS" signature="capricornDataDisplayed()[pri:14, instance:test.horoscope.Total_horoscope@271053e1]" name="capricornDataDisplayed" duration-ms="2800" started-at="2018-02-01T21:27:20Z" description="capricornDataDisplayed" finished-at="2018-02-01T21:27:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- capricornDataDisplayed -->
-        <test-method status="PASS" signature="aquariusDataDisplayed()[pri:15, instance:test.horoscope.Total_horoscope@271053e1]" name="aquariusDataDisplayed" duration-ms="2565" started-at="2018-02-01T21:27:23Z" description="aquariusDataDisplayed" finished-at="2018-02-01T21:27:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aquariusDataDisplayed -->
-        <test-method status="PASS" signature="piscesDataDisplayed()[pri:16, instance:test.horoscope.Total_horoscope@271053e1]" name="piscesDataDisplayed" duration-ms="2341" started-at="2018-02-01T21:27:26Z" description="piscesDataDisplayed" finished-at="2018-02-01T21:27:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- piscesDataDisplayed -->
-        <test-method status="FAIL" signature="kundaliMatch()[pri:17, instance:test.horoscope.Total_horoscope@271053e1]" name="kundaliMatch" duration-ms="6735" started-at="2018-02-01T21:27:28Z" description="KUNDALI MATCH " finished-at="2018-02-01T21:27:35Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="FAIL" signature="kundaliMatch()[pri:17, instance:test.horoscope.Total_horoscope@59494225]" name="kundaliMatch" duration-ms="8883" started-at="2018-02-16T22:02:19Z" description="KUNDALI MATCH " finished-at="2018-02-16T22:02:28Z">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.className: android.view.ViewGroup (tried for 5 second(s) with 500 MILLISECONDS interval)]]>
+              <![CDATA[Cannot get a STRING value from a NUMERIC cell]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.className: android.view.ViewGroup (tried for 5 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at test.horoscope.Total_horoscope.kundaliMatch(Total_horoscope.java:197)
+              <![CDATA[java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:1077)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:395)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:347)
+	at com.horoscope.util.Horoscope_GenericLib.readExcelData(Horoscope_GenericLib.java:43)
+	at com.horoscope.util.Horoscope_baseLib.kundaliMatchHoroscope(Horoscope_baseLib.java:634)
+	at test.horoscope.Total_horoscope.kundaliMatch(Total_horoscope.java:217)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -156,24 +132,9 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.className: android.view.ViewGroup
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
-System info: host: 'AJAY', ip: '192.168.0.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:882)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:881)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:643)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:640)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- kundaliMatch -->

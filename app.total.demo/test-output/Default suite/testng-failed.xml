@@ -5,7 +5,7 @@
     <classes>
       <class name="test.horoscope.Total_horoscope">
         <methods>
-          <include name="openingRechargeApp"/>
+          <include name="LaunchingFromAppDrawer"/>
           <include name="kundaliMatch"/>
           <include name="appLaunch"/>
         </methods>
