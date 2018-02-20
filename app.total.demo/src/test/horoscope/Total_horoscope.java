@@ -210,7 +210,7 @@ public class Total_horoscope extends Horoscope_baseLib
 */
 
 
-	@Test(priority=17,description="KUNDALI MATCH ")
+	@Test(priority=17,description="KUNDALI MATCH ") 
 	public static void kundaliMatch() throws Exception
 	{	
 		

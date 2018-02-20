@@ -5,8 +5,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 
 
 
@@ -33,15 +39,27 @@ public class Horoscope_GenericLib {
 	
 	//To read data from excel sheet
 	
-	public static String readExcelData(int row,int column) throws Exception 
+	public static String readExcelData(int rowNumber,int columnNumber) throws Exception 
 	{ 
 		File source = new File("D:\\Selenium\\TestData.xlsx"); 
 		FileInputStream fis = new FileInputStream(source); 
 		XSSFWorkbook wb = new XSSFWorkbook(fis); 
-		XSSFSheet sheet1 = wb.getSheetAt(0); 
+		XSSFSheet sheet = wb.getSheetAt(0); 
+		String cellValue = null;
 		
-		String data0=sheet1.getRow(row).getCell(column).getStringCellValue();
-		System.out.println("data from the excel is " + data0); return data0; 
+		XSSFRow row = sheet.getRow(rowNumber);
+		XSSFCell cell = row.getCell(columnNumber);
+		
+		if(cell.getCellTypeEnum() == CellType.STRING)
+			cellValue = cell.getStringCellValue();
+		
+		else if(cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum()== CellType.FORMULA)
+		{
+			cellValue = String.valueOf(cell.getNumericCellValue());
+			
+		}
+
+		return cellValue;
 		
 	}
 	
