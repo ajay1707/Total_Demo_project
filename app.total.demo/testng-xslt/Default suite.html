@@ -1,0 +1,1970 @@
+<html xmlns:math="http://exslt.org/math" xmlns:testng="http://testng.org">
+   <head>
+      <title>TestNG Results</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+      <meta http-equiv="pragma" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="max-age=0"></meta>
+      <meta http-equiv="cache-control" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="no-store"></meta>
+      <LINK rel="stylesheet" href="style.css"></LINK>
+      <script type="text/javascript" src="main.js"></script>
+   </head>
+   <body>
+      <table width="100%" style="font-size: 16px; margin-bottom: 10px;" cellspacing="1">
+         <tr>
+            <td width="100%">
+               All methods in suite
+               
+               <b>Default suite</b>
+            </td>
+            <td style="background-color: #FFBBBB; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">2</div>
+            </td>
+            <td style="background-color: lightgreen; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">16</div>
+            </td>
+            <td style="background-color: #FFFFBB; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">0</div>
+            </td>
+            <td align="center" style="background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">18</div>
+            </td>
+            <td align="center"
+                style="font-weight: bold; background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">89%</div>
+            </td>
+            <td style="background-color: #eaf0f7; padding: 3px 3px 3px 0;" align="center"
+                nowrap="true">4m
+               39s
+               
+            </td>
+         </tr>
+      </table>
+      <div style="width: 200px;">
+         <label for="groupMethodsCheckBox" style="font-weight: bold; margin: 0;">
+            <input id="groupMethodsCheckBox" type="checkbox" onclick="switchTestMethodsView(this)"
+                   checked=""></input>
+            Group by class
+            
+         </label>
+         <br></br>
+         <label for="methodsFilter_ALL" style="font-weight: bold; margin: 0;">
+            <input id="methodsFilter_ALL" type="checkbox"
+                   onclick="testMethodsFilterChanged(this, 'ALL')"
+                   checked=""></input>
+            All
+            
+         </label>
+      </div>
+      <label for="methodsFilter_FAIL" style="margin-left: 20px;">
+         <input id="methodsFilter_FAIL" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'FAIL')"
+                checked=""></input>
+         Failed
+         
+      </label>
+      <label for="methodsFilter_PASS">
+         <input id="methodsFilter_PASS" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'PASS')"
+                checked=""></input>
+         Passed
+         
+      </label>
+      <label for="methodsFilter_SKIP">
+         <input id="methodsFilter_SKIP" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'SKIP')"
+                checked=""></input>
+         Skipped
+         
+      </label>
+      <label for="methodsFilter_CONF">
+         <input id="methodsFilter_CONF" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'CONF')"
+                checked=""></input>
+         Config
+         
+      </label>
+      <br></br>
+      <div id="testMethodsByStatus" style="display: none;">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_performingRechargeApp_byStatus_failed_FAIL1_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_performingRechargeApp_byStatus_failed_FAIL1_details')">performingRechargeApp()</a>
+               </td>
+               <td nowrap="true">12:54:16</td>
+               <td nowrap="true" align="right">52s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_performingRechargeApp_byStatus_failed_FAIL1_exception')">java.lang.AssertionError: 
+                     expected [Recharge successful] but found [Recharge failed]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_performingRechargeApp_byStatus_failed_FAIL1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>performingRechargeApp
+                     </div>
+                     <div>
+                        <b>Description: </b>performing the Recharge
+                     </div>
+                     <div>
+                        <b>Signature: </b>performingRechargeApp()[pri:1, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:54:16
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:09
+                     </div>
+                     <div>
+                        <b>Duration: </b>52s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_performingRechargeApp_byStatus_failed_FAIL1_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [Recharge successful] but found [Recharge failed]
+                        	at org.testng.Assert.fail(Assert.java:93)
+                        	at org.testng.Assert.failNotEquals(Assert.java:512)
+                        	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+                        	at org.testng.Assert.assertEquals(Assert.java:115)
+                        	at org.testng.Assert.assertEquals(Assert.java:189)
+                        	at org.testng.Assert.assertEquals(Assert.java:199)
+                        	at com.horoscope.util.Horoscope_baseLib.performingRecharge(Horoscope_baseLib.java:604)
+                        	at test.horoscope.Total_horoscope.performingRechargeApp(Total_horoscope.java:60)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                        	at java.lang.reflect.Method.invoke(Unknown Source)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+                        	at org.testng.TestRunner.run(TestRunner.java:634)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+                        	at org.testng.TestNG.runSuites(TestNG.java:1161)
+                        	at org.testng.TestNG.run(TestNG.java:1129)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byStatus_failed_FAIL2_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byStatus_failed_FAIL2_details')">LaunchingFromAppDrawer()</a>
+               </td>
+               <td nowrap="true">12:55:09</td>
+               <td nowrap="true" align="right">16s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byStatus_failed_FAIL2_exception')">org.openqa.selenium.NoSuchElementException: 
+                     An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace
+                     information)
+                     Command duration or timeout: 0 milliseconds
+                     For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                     Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+                     System info: host: 'AJAY', ip: '172.17.18.153', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version:
+                     '1.8.0_151'
+                     Driver info: io.appium.java_client.android.AndroidDriver
+                     Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android,
+                     databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho...,
+                     browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version:
+                     6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID:
+                     4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout:
+                     3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {},
+                     webStorageEnabled: false}
+                     Session ID: 740c712a-9c0d-45dc-97bd-cb5bbcd1e437
+                     *** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign
+                     in to TOTAL to start using to all hike Services!']}
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byStatus_failed_FAIL2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>LaunchingFromAppDrawer
+                     </div>
+                     <div>
+                        <b>Description: </b>Launch Horoscope from the App drawer
+                     </div>
+                     <div>
+                        <b>Signature: </b>LaunchingFromAppDrawer()[pri:2, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:09
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:25
+                     </div>
+                     <div>
+                        <b>Duration: </b>16s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byStatus_failed_FAIL2_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+                        (WARNING: The server did not provide any stacktrace information)
+                        Command duration or timeout: 0 milliseconds
+                        For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                        Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+                        System info: host: 'AJAY', ip: '172.17.18.153', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version:
+                        '1.8.0_151'
+                        Driver info: io.appium.java_client.android.AndroidDriver
+                        Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android,
+                        databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho...,
+                        browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version:
+                        6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID:
+                        4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout:
+                        3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {},
+                        webStorageEnabled: false}
+                        Session ID: 740c712a-9c0d-45dc-97bd-cb5bbcd1e437
+                        *** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign
+                        in to TOTAL to start using to all hike Services!']}
+                        	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+                        	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+                        	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+                        	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+                        	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+                        	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+                        	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+                        	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+                        	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+                        	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+                        	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+                        	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+                        	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+                        	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+                        	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+                        	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+                        	at test.horoscope.Total_horoscope.LaunchingFromAppDrawer(Total_horoscope.java:79)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                        	at java.lang.reflect.Method.invoke(Unknown Source)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+                        	at org.testng.TestRunner.run(TestRunner.java:634)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+                        	at org.testng.TestNG.runSuites(TestNG.java:1161)
+                        	at org.testng.TestNG.run(TestNG.java:1129)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_appLaunch_byStatus_passed_PASS1_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_appLaunch_byStatus_passed_PASS1_details')">appLaunch()</a>
+               </td>
+               <td nowrap="true">12:53:39</td>
+               <td nowrap="true" align="right">37s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_appLaunch_byStatus_passed_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>appLaunch
+                     </div>
+                     <div>
+                        <b>Signature: </b>appLaunch()[pri:0, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:53:39
+                     </div>
+                     <div>
+                        <b>End time: </b>12:54:16
+                     </div>
+                     <div>
+                        <b>Duration: </b>37s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_myZodiacTab_byStatus_passed_PASS2_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_myZodiacTab_byStatus_passed_PASS2_details')">myZodiacTab()</a>
+               </td>
+               <td nowrap="true">12:55:25</td>
+               <td nowrap="true" align="right">8s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_myZodiacTab_byStatus_passed_PASS2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>myZodiacTab
+                     </div>
+                     <div>
+                        <b>Description: </b>click on My Zodiac tab
+                     </div>
+                     <div>
+                        <b>Signature: </b>myZodiacTab()[pri:4, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:25
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:34
+                     </div>
+                     <div>
+                        <b>Duration: </b>8s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_DOBsetting_byStatus_passed_PASS3_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_DOBsetting_byStatus_passed_PASS3_details')">DOBsetting()</a>
+               </td>
+               <td nowrap="true">12:55:34</td>
+               <td nowrap="true" align="right">27s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_DOBsetting_byStatus_passed_PASS3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>DOBsetting
+                     </div>
+                     <div>
+                        <b>Description: </b>click on setting (change DOB) icon
+                     </div>
+                     <div>
+                        <b>Signature: </b>DOBsetting()[pri:5, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:34
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:01
+                     </div>
+                     <div>
+                        <b>Duration: </b>27s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_allZodiacTabSelect_byStatus_passed_PASS4_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_allZodiacTabSelect_byStatus_passed_PASS4_details')">allZodiacTabSelect()</a>
+               </td>
+               <td nowrap="true">12:56:01</td>
+               <td nowrap="true" align="right">873 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_allZodiacTabSelect_byStatus_passed_PASS4_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>allZodiacTabSelect
+                     </div>
+                     <div>
+                        <b>Description: </b>all zodiac tab select
+                     </div>
+                     <div>
+                        <b>Signature: </b>allZodiacTabSelect()[pri:6, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:01
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:02
+                     </div>
+                     <div>
+                        <b>Duration: </b>873 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_ariesDataDisplayed_byStatus_passed_PASS5_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_ariesDataDisplayed_byStatus_passed_PASS5_details')">ariesDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:02</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_ariesDataDisplayed_byStatus_passed_PASS5_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>ariesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>ariesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>ariesDataDisplayed()[pri:7, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:02
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:04
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_cancerDataDisplayed_byStatus_passed_PASS6_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_cancerDataDisplayed_byStatus_passed_PASS6_details')">cancerDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:04</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_cancerDataDisplayed_byStatus_passed_PASS6_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>cancerDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>cancerDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>cancerDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:04
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:07
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_geminiDataDisplayed_byStatus_passed_PASS7_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_geminiDataDisplayed_byStatus_passed_PASS7_details')">geminiDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:07</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_geminiDataDisplayed_byStatus_passed_PASS7_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>geminiDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>geminiDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>geminiDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:07
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:10
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_taurusDataDisplayed_byStatus_passed_PASS8_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_taurusDataDisplayed_byStatus_passed_PASS8_details')">taurusDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:10</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_taurusDataDisplayed_byStatus_passed_PASS8_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>taurusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>taurusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>taurusDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:10
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:12
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_leoDataDisplayed_byStatus_passed_PASS9_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_leoDataDisplayed_byStatus_passed_PASS9_details')">leoDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:12</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_leoDataDisplayed_byStatus_passed_PASS9_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>leoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>leoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>leoDataDisplayed()[pri:9, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:12
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:15
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_virgoDataDisplayed_byStatus_passed_PASS10_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_virgoDataDisplayed_byStatus_passed_PASS10_details')">virgoDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:15</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_virgoDataDisplayed_byStatus_passed_PASS10_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>virgoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>virgoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>virgoDataDisplayed()[pri:10, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:15
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:17
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_libraDataDisplayed_byStatus_passed_PASS11_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_libraDataDisplayed_byStatus_passed_PASS11_details')">libraDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:17</td>
+               <td nowrap="true" align="right">3s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_libraDataDisplayed_byStatus_passed_PASS11_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>libraDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>libraDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>libraDataDisplayed()[pri:11, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:17
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:20
+                     </div>
+                     <div>
+                        <b>Duration: </b>3s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_scorpioDataDisplayed_byStatus_passed_PASS12_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_scorpioDataDisplayed_byStatus_passed_PASS12_details')">scorpioDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:20</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_scorpioDataDisplayed_byStatus_passed_PASS12_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>scorpioDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>scorpioDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>scorpioDataDisplayed()[pri:12, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:20
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:22
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_saggitariusDisplayed_byStatus_passed_PASS13_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_saggitariusDisplayed_byStatus_passed_PASS13_details')">saggitariusDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:22</td>
+               <td nowrap="true" align="right">3s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_saggitariusDisplayed_byStatus_passed_PASS13_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>saggitariusDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>saggitariusDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>saggitariusDisplayed()[pri:13, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:22
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:26
+                     </div>
+                     <div>
+                        <b>Duration: </b>3s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_capricornDataDisplayed_byStatus_passed_PASS14_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_capricornDataDisplayed_byStatus_passed_PASS14_details')">capricornDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:26</td>
+               <td nowrap="true" align="right">1s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_capricornDataDisplayed_byStatus_passed_PASS14_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>capricornDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>capricornDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>capricornDataDisplayed()[pri:14, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:26
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:28
+                     </div>
+                     <div>
+                        <b>Duration: </b>1s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_aquariusDataDisplayed_byStatus_passed_PASS15_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_aquariusDataDisplayed_byStatus_passed_PASS15_details')">aquariusDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:28</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_aquariusDataDisplayed_byStatus_passed_PASS15_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>aquariusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>aquariusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>aquariusDataDisplayed()[pri:15, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:28
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:30
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_piscesDataDisplayed_byStatus_passed_PASS16_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_piscesDataDisplayed_byStatus_passed_PASS16_details')">piscesDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:30</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_piscesDataDisplayed_byStatus_passed_PASS16_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>piscesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>piscesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>piscesDataDisplayed()[pri:16, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:30
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:33
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_kundaliMatch_byStatus_passed_PASS17_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_kundaliMatch_byStatus_passed_PASS17_details')">kundaliMatch()</a>
+               </td>
+               <td nowrap="true">12:56:33</td>
+               <td nowrap="true" align="right">1m
+                  46s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_kundaliMatch_byStatus_passed_PASS17_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>kundaliMatch
+                     </div>
+                     <div>
+                        <b>Description: </b>KUNDALI MATCH 
+                     </div>
+                     <div>
+                        <b>Signature: </b>kundaliMatch()[pri:17, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:33
+                     </div>
+                     <div>
+                        <b>End time: </b>12:58:19
+                     </div>
+                     <div>
+                        <b>Duration: </b>1m
+                        46s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+      </div>
+      <div id="testMethodsByClass">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">test.horoscope.Total_horoscope</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_appLaunch_byClass_PASS1_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_appLaunch_byClass_PASS1_details')">appLaunch()</a>
+               </td>
+               <td nowrap="true">12:53:39</td>
+               <td nowrap="true" align="right">37s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_appLaunch_byClass_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>appLaunch
+                     </div>
+                     <div>
+                        <b>Signature: </b>appLaunch()[pri:0, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:53:39
+                     </div>
+                     <div>
+                        <b>End time: </b>12:54:16
+                     </div>
+                     <div>
+                        <b>Duration: </b>37s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_performingRechargeApp_byClass_FAIL2_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_performingRechargeApp_byClass_FAIL2_details')">performingRechargeApp()</a>
+               </td>
+               <td nowrap="true">12:54:16</td>
+               <td nowrap="true" align="right">52s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_performingRechargeApp_byClass_FAIL2_exception')">java.lang.AssertionError: 
+                     expected [Recharge successful] but found [Recharge failed]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_performingRechargeApp_byClass_FAIL2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>performingRechargeApp
+                     </div>
+                     <div>
+                        <b>Description: </b>performing the Recharge
+                     </div>
+                     <div>
+                        <b>Signature: </b>performingRechargeApp()[pri:1, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:54:16
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:09
+                     </div>
+                     <div>
+                        <b>Duration: </b>52s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_performingRechargeApp_byClass_FAIL2_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [Recharge successful] but found [Recharge failed]
+                        	at org.testng.Assert.fail(Assert.java:93)
+                        	at org.testng.Assert.failNotEquals(Assert.java:512)
+                        	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+                        	at org.testng.Assert.assertEquals(Assert.java:115)
+                        	at org.testng.Assert.assertEquals(Assert.java:189)
+                        	at org.testng.Assert.assertEquals(Assert.java:199)
+                        	at com.horoscope.util.Horoscope_baseLib.performingRecharge(Horoscope_baseLib.java:604)
+                        	at test.horoscope.Total_horoscope.performingRechargeApp(Total_horoscope.java:60)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                        	at java.lang.reflect.Method.invoke(Unknown Source)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+                        	at org.testng.TestRunner.run(TestRunner.java:634)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+                        	at org.testng.TestNG.runSuites(TestNG.java:1161)
+                        	at org.testng.TestNG.run(TestNG.java:1129)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byClass_FAIL3_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byClass_FAIL3_details')">LaunchingFromAppDrawer()</a>
+               </td>
+               <td nowrap="true">12:55:09</td>
+               <td nowrap="true" align="right">16s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byClass_FAIL3_exception')">org.openqa.selenium.NoSuchElementException: 
+                     An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace
+                     information)
+                     Command duration or timeout: 0 milliseconds
+                     For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                     Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+                     System info: host: 'AJAY', ip: '172.17.18.153', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version:
+                     '1.8.0_151'
+                     Driver info: io.appium.java_client.android.AndroidDriver
+                     Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android,
+                     databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho...,
+                     browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version:
+                     6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID:
+                     4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout:
+                     3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {},
+                     webStorageEnabled: false}
+                     Session ID: 740c712a-9c0d-45dc-97bd-cb5bbcd1e437
+                     *** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign
+                     in to TOTAL to start using to all hike Services!']}
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byClass_FAIL3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>LaunchingFromAppDrawer
+                     </div>
+                     <div>
+                        <b>Description: </b>Launch Horoscope from the App drawer
+                     </div>
+                     <div>
+                        <b>Signature: </b>LaunchingFromAppDrawer()[pri:2, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:09
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:25
+                     </div>
+                     <div>
+                        <b>Duration: </b>16s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_LaunchingFromAppDrawer_byClass_FAIL3_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+                        (WARNING: The server did not provide any stacktrace information)
+                        Command duration or timeout: 0 milliseconds
+                        For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                        Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+                        System info: host: 'AJAY', ip: '172.17.18.153', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version:
+                        '1.8.0_151'
+                        Driver info: io.appium.java_client.android.AndroidDriver
+                        Capabilities {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho..., browserName: android,
+                        databaseEnabled: false, desired: {appActivity: com.amazon.mShop.home.HomeA..., appPackage: in.amazon.mShop.android.sho...,
+                        browserName: android, deviceName: 0123456789ABCDEF, newCommandTimeout: 3000, platform: ANDROID, platformName: android, version:
+                        6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G570F, deviceName: 4200fb57dec5c311, deviceScreenSize: 720x1280, deviceUDID:
+                        4200fb57dec5c311, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout:
+                        3000, platform: ANDROID, platformName: ANDROID, platformVersion: 6.0.1, takesScreenshot: true, version: 6.0.1, warnings: {},
+                        webStorageEnabled: false}
+                        Session ID: 740c712a-9c0d-45dc-97bd-cb5bbcd1e437
+                        *** Element info: {Using=xpath, value=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign
+                        in to TOTAL to start using to all hike Services!']}
+                        	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+                        	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+                        	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+                        	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+                        	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+                        	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+                        	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+                        	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+                        	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+                        	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+                        	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+                        	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+                        	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+                        	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+                        	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+                        	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+                        	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+                        	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+                        	at test.horoscope.Total_horoscope.LaunchingFromAppDrawer(Total_horoscope.java:79)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                        	at java.lang.reflect.Method.invoke(Unknown Source)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+                        	at org.testng.TestRunner.run(TestRunner.java:634)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+                        	at org.testng.TestNG.runSuites(TestNG.java:1161)
+                        	at org.testng.TestNG.run(TestNG.java:1129)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="test.horoscope.Total_horoscope_myZodiacTab_byClass_PASS4_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_myZodiacTab_byClass_PASS4_details')">myZodiacTab()</a>
+               </td>
+               <td nowrap="true">12:55:25</td>
+               <td nowrap="true" align="right">8s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_myZodiacTab_byClass_PASS4_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>myZodiacTab
+                     </div>
+                     <div>
+                        <b>Description: </b>click on My Zodiac tab
+                     </div>
+                     <div>
+                        <b>Signature: </b>myZodiacTab()[pri:4, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:25
+                     </div>
+                     <div>
+                        <b>End time: </b>12:55:34
+                     </div>
+                     <div>
+                        <b>Duration: </b>8s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_DOBsetting_byClass_PASS5_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_DOBsetting_byClass_PASS5_details')">DOBsetting()</a>
+               </td>
+               <td nowrap="true">12:55:34</td>
+               <td nowrap="true" align="right">27s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_DOBsetting_byClass_PASS5_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>DOBsetting
+                     </div>
+                     <div>
+                        <b>Description: </b>click on setting (change DOB) icon
+                     </div>
+                     <div>
+                        <b>Signature: </b>DOBsetting()[pri:5, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:55:34
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:01
+                     </div>
+                     <div>
+                        <b>Duration: </b>27s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_allZodiacTabSelect_byClass_PASS6_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_allZodiacTabSelect_byClass_PASS6_details')">allZodiacTabSelect()</a>
+               </td>
+               <td nowrap="true">12:56:01</td>
+               <td nowrap="true" align="right">873 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_allZodiacTabSelect_byClass_PASS6_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>allZodiacTabSelect
+                     </div>
+                     <div>
+                        <b>Description: </b>all zodiac tab select
+                     </div>
+                     <div>
+                        <b>Signature: </b>allZodiacTabSelect()[pri:6, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:01
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:02
+                     </div>
+                     <div>
+                        <b>Duration: </b>873 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_ariesDataDisplayed_byClass_PASS7_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_ariesDataDisplayed_byClass_PASS7_details')">ariesDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:02</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_ariesDataDisplayed_byClass_PASS7_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>ariesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>ariesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>ariesDataDisplayed()[pri:7, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:02
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:04
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_cancerDataDisplayed_byClass_PASS8_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_cancerDataDisplayed_byClass_PASS8_details')">cancerDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:04</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_cancerDataDisplayed_byClass_PASS8_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>cancerDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>cancerDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>cancerDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:04
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:07
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_geminiDataDisplayed_byClass_PASS9_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_geminiDataDisplayed_byClass_PASS9_details')">geminiDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:07</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_geminiDataDisplayed_byClass_PASS9_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>geminiDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>geminiDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>geminiDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:07
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:10
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_taurusDataDisplayed_byClass_PASS10_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_taurusDataDisplayed_byClass_PASS10_details')">taurusDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:10</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_taurusDataDisplayed_byClass_PASS10_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>taurusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>taurusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>taurusDataDisplayed()[pri:8, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:10
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:12
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_leoDataDisplayed_byClass_PASS11_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_leoDataDisplayed_byClass_PASS11_details')">leoDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:12</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_leoDataDisplayed_byClass_PASS11_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>leoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>leoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>leoDataDisplayed()[pri:9, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:12
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:15
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_virgoDataDisplayed_byClass_PASS12_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_virgoDataDisplayed_byClass_PASS12_details')">virgoDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:15</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_virgoDataDisplayed_byClass_PASS12_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>virgoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>virgoDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>virgoDataDisplayed()[pri:10, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:15
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:17
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_libraDataDisplayed_byClass_PASS13_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_libraDataDisplayed_byClass_PASS13_details')">libraDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:17</td>
+               <td nowrap="true" align="right">3s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_libraDataDisplayed_byClass_PASS13_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>libraDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>libraDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>libraDataDisplayed()[pri:11, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:17
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:20
+                     </div>
+                     <div>
+                        <b>Duration: </b>3s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_scorpioDataDisplayed_byClass_PASS14_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_scorpioDataDisplayed_byClass_PASS14_details')">scorpioDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:20</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_scorpioDataDisplayed_byClass_PASS14_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>scorpioDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>scorpioDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>scorpioDataDisplayed()[pri:12, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:20
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:22
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_saggitariusDisplayed_byClass_PASS15_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_saggitariusDisplayed_byClass_PASS15_details')">saggitariusDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:22</td>
+               <td nowrap="true" align="right">3s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_saggitariusDisplayed_byClass_PASS15_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>saggitariusDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>saggitariusDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>saggitariusDisplayed()[pri:13, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:22
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:26
+                     </div>
+                     <div>
+                        <b>Duration: </b>3s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_capricornDataDisplayed_byClass_PASS16_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_capricornDataDisplayed_byClass_PASS16_details')">capricornDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:26</td>
+               <td nowrap="true" align="right">1s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_capricornDataDisplayed_byClass_PASS16_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>capricornDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>capricornDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>capricornDataDisplayed()[pri:14, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:26
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:28
+                     </div>
+                     <div>
+                        <b>Duration: </b>1s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_aquariusDataDisplayed_byClass_PASS17_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_aquariusDataDisplayed_byClass_PASS17_details')">aquariusDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:28</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_aquariusDataDisplayed_byClass_PASS17_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>aquariusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>aquariusDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>aquariusDataDisplayed()[pri:15, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:28
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:30
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_piscesDataDisplayed_byClass_PASS18_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_piscesDataDisplayed_byClass_PASS18_details')">piscesDataDisplayed()</a>
+               </td>
+               <td nowrap="true">12:56:30</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_piscesDataDisplayed_byClass_PASS18_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>piscesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Description: </b>piscesDataDisplayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>piscesDataDisplayed()[pri:16, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:30
+                     </div>
+                     <div>
+                        <b>End time: </b>12:56:33
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="test.horoscope.Total_horoscope_kundaliMatch_byClass_PASS19_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('test.horoscope.Total_horoscope_kundaliMatch_byClass_PASS19_details')">kundaliMatch()</a>
+               </td>
+               <td nowrap="true">12:56:33</td>
+               <td nowrap="true" align="right">1m
+                  46s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="test.horoscope.Total_horoscope_kundaliMatch_byClass_PASS19_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>kundaliMatch
+                     </div>
+                     <div>
+                        <b>Description: </b>KUNDALI MATCH 
+                     </div>
+                     <div>
+                        <b>Signature: </b>kundaliMatch()[pri:17, instance:test.horoscope.Total_horoscope@6e1567f1]
+                     </div>
+                     <div>
+                        <b>Start time: </b>12:56:33
+                     </div>
+                     <div>
+                        <b>End time: </b>12:58:19
+                     </div>
+                     <div>
+                        <b>Duration: </b>1m
+                        46s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+         <br></br>
+      </div>
+      <div style="margin-top: 15px; color: gray; text-align: center; font-size: 9px;">
+         Generated with
+         
+         <a href="http://code.google.com/p/testng-xslt/" style="color: #8888aa;"
+            target="_blank">
+            TestNG XSLT
+            
+         </a>
+      </div>
+   </body>
+</html>

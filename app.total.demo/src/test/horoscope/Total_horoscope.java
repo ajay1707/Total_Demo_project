@@ -16,6 +16,8 @@ import com.horoscope.PO.All_zodiac_PO;
 import com.horoscope.PO.Kundali_match_PO;
 import com.horoscope.PO.my_Zodiac_PO;
 import com.horoscope.util.Horoscope_baseLib;
+import com.relevantcodes.extentreports.ExtentReports;
+
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 
@@ -23,6 +25,7 @@ public class Total_horoscope extends Horoscope_baseLib
 {	
 	Dimension size;
 	static Logger log = Logger.getLogger(Total_horoscope.class.getName());
+	
 
 
 /*
@@ -42,40 +45,56 @@ public class Total_horoscope extends Horoscope_baseLib
 	}
 */
 	
-	@Test(priority=2,description="performing the Recharge")
-	public static void openingRechargeApp() throws Exception
+
+	@Test(priority=1,description="performing the Recharge")
+	public static void performingRechargeApp() throws Exception
 	{
 		log.info("performing recharge");
-		performingRecharge(driver,"9781909676","06");	
-		
-		// performing
-	}
-
-
-
-	@Test(priority=3,description="Launch Horoscope from the App drawer")
-	public static void LaunchingFromAppDrawer() throws Exception
-	{
-		appDrawerApp(driver, "Horoscope");
+		performingRecharge(driver,"9781909676","01");	
 	}
 
 /*
+
+	@Test(priority=2,description="Launch Horoscope from the App drawer")
+	public static void LaunchingHoroscopeFromAppDrawer() throws Exception
+	{	
+		//opening the Home screen
+		homeButton(driver);
+		appDrawerApp(driver, "Horoscope");
+		
+		// checking the SSO handling
+		// need to check when this web element is not visible
+		WebElement sample1;
+		sample1 = driver.findElement(By.xpath("//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[@text='Sign in to TOTAL to start using to all hike Services!']"));
+		boolean status = sample1.isDisplayed();
+		if(status)
+		{
+			SSOgateLogIn(driver);
+		}
+		
+>>>>>>> Total_demo_branch_01
+	}
+
+
 	@Test(priority=2,description="code for launching the test.horoscope from -1 screen")
 	public static void LaunchingFromPillScreen() throws Exception
 	{
 		lauchFromPillScreen(driver,"Recharge");
 	}
-*/
 
-/*
+
+
 	@Test(priority=2,description="click on the Horoscope from Launcher")
 	public  void horoscopeLaucher() throws Exception
 	{
 		horoscopeLaucherclick(driver);
 	}
-*/
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Total_demo_branch_01
 	// we need to reconsider the code
 	@Test(priority=4,description="click on My Zodiac tab")
 	public static void myZodiacTab()
@@ -85,7 +104,7 @@ public class Total_horoscope extends Horoscope_baseLib
 		try {
 			if(my_Zodiac_PO.firstTimeUser().isDisplayed())
 			{	
-				Horoscope_baseLib.changeDobmyZodiac(driver, "11", "08", "1906");
+				changeDobmyZodiac(driver, "11", "08", "1906");
 				waitForZodiacData(driver);
 			}
 			else
@@ -185,10 +204,14 @@ public class Total_horoscope extends Horoscope_baseLib
 		Horoscope_baseLib.allZodiacSoftAssert(driver, "Pisces", all_zodiac_PO);
 	}
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> Total_demo_branch_01
 
 
 
-	@Test(priority=17,description="KUNDALI MATCH ")
+	@Test(priority=17,description="KUNDALI MATCH ") 
 	public static void kundaliMatch() throws Exception
 	{	
 
@@ -235,7 +258,7 @@ public class Total_horoscope extends Horoscope_baseLib
 				(By.xpath("//android.view.ViewGroup")));
 		backButton(driver);
 	}
-
+*/
 }
 
 

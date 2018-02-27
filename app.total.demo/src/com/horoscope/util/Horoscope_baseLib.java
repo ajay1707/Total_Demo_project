@@ -3,6 +3,8 @@ package com.horoscope.util;
 import com.handlingSSO.PO.Handling_SSO_PO;
 import com.horoscope.PO.*;
 import com.recharge.PO.RechargeDemo_PO;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,6 +37,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.util.LoadLibs;
+import test.horoscope.Total_horoscope;
 
 /*import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -59,7 +62,11 @@ public class Horoscope_baseLib
 
 	static public String sDirPath = System.getProperty("user.dir");	
 	static public String sPropFileName = sDirPath+"\\configProperties.properties";
-
+	
+	//*****************************Advance reports are generated**************************** //
+	static ExtentReports advanceReport = ExtentReports.get(Total_horoscope.class);
+		
+	
 
 	//*****************************setting up the capabilities*******************************
 
@@ -91,6 +98,9 @@ public class Horoscope_baseLib
 		// testing purpose
 		backButton(driver);
 		backButton(driver);
+		
+		//initializing the path to the reports 
+		advanceReport.init("D:\\Selenium\\Tools\\extentreports-java-1.4\\advanceReport.html", true);
 
 		// in.amazon.mShop.android.shopping
 		//	com.amazon.mShop.sso.SigninPromptActivit
@@ -124,6 +134,8 @@ public class Horoscope_baseLib
 	
 	public static void homeButton(AndroidDriver<WebElement> driver)
 	{
+		//advance report
+		advanceReport.log(LogStatus.INFO, "click on the Home button");
 		(driver).pressKeyCode(AndroidKeyCode.HOME);
 	}
 
@@ -207,6 +219,9 @@ public class Horoscope_baseLib
 	
 	public static void changeDobmyZodiac(AndroidDriver<WebElement> driver,String date,String month,String year)			
 	{	
+		//advance report
+		advanceReport.startTest("changing the Zodiac Data");
+		
 		change_date_PO DOB = new change_date_PO(driver);
 		DOB.dd_DOB().sendKeys(date);
 		DOB.mm_DOB().sendKeys(month);
@@ -232,6 +247,10 @@ public class Horoscope_baseLib
 	
 	public static void changeDOBsetting(AndroidDriver<WebElement> driver,String date,String month,String year)			
 	{
+		
+		//advance report
+		advanceReport.startTest("Changing the Date of birth ");
+		
 		change_date_PO DOB = new change_date_PO(driver);
 		DOB.settingIcon().click();
 		DOB.dobIcon().click();
@@ -310,7 +329,10 @@ public class Horoscope_baseLib
 	
 	public static void appDrawerApp(AndroidDriver<WebElement> driver,String appName)			
 	{	
-
+		
+		//advance report
+		advanceReport.startTest(appName+ "  is opening from the App Drawer");
+		
 		WebElement app_Drawer = driver.findElement(By.xpath("//android.view.ViewGroup[@index='1']/android.widget.TextView[@index='3']"));
 		app_Drawer.click();
 
@@ -434,7 +456,9 @@ public class Horoscope_baseLib
 	
 	public static void allZodiacSoftAssert(AndroidDriver<WebElement> driver,String zodiac_name, All_zodiac_PO all_zodiac_PO) throws Exception
 	{		
-
+		
+		//advance report
+		advanceReport.startTest(zodiac_name+ "name is showing");
 		WebDriverWait wait = new WebDriverWait(driver,1);
 		boolean expectedDisplayed = true;
 		boolean actualDisplayed = false;
@@ -456,6 +480,8 @@ public class Horoscope_baseLib
 		}
 		(driver).pressKeyCode(AndroidKeyCode.BACK);	
 		Assert.assertEquals(actualDisplayed, true ,zodiac_name+"	data is not displayed");
+		advanceReport.log(LogStatus.PASS, zodiac_name+ "data is shown");
+		advanceReport.endTest();
 	}
 
 	//*******************************METHOD FOR CHECKING THE ZODIAC DATA CAN BE DISPLAYED OR NOT(CAN BE GENERALISED)**************************************//
@@ -562,30 +588,15 @@ public class Horoscope_baseLib
 	//*******************************POSITIVE FLOW FOR RECHARGEW APP**************************************//
 	
 	public static void performingRecharge(AndroidDriver<WebElement> driver,String Number,String amount) throws Exception
-	{		
-		RechargeDemo_PO rechargeDemo_PO = new RechargeDemo_PO(driver);
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		appDrawerApp(driver, "Recharge");
-
-		rechargeDemo_PO.mobileNumberfield().clear();
-		rechargeDemo_PO.mobileNumberfield().sendKeys(Number);
-		rechargeDemo_PO.selectOperator().click();
-		wait.until
-		(ExpectedConditions.visibilityOfElementLocated
-				(By.xpath("//android.view.ViewGroup")));
-
-		rechargeDemo_PO.operatorSelect().click();
-		wait.until
-		(ExpectedConditions.visibilityOfElementLocated
-				(By.xpath("//android.view.ViewGroup")));
-		/*
-			touchAction = new TouchAction((PerformsTouchActions) driver);
-			touchAction.longPress(200 ,750).moveTo(200,150).release().perform();
-		 */
-		rechargeDemo_PO.circleSelect().click();
-		rechargeDemo_PO.amountField().clear();
+	{		abnc		
+		//advance report
+		advanceReport.log(LogStatus.INFO, "Entering the Recharge Amount");
+		
 		rechargeDemo_PO.amountField().sendKeys(amount);
-
+		
+		//advance report
+		advanceReport.log(LogStatus.INFO, "click on the Recharge button");
+		
 		rechargeDemo_PO.rechargeButton().click();
 		wait.until
 		(ExpectedConditions.visibilityOfElementLocated
@@ -599,10 +610,24 @@ public class Horoscope_baseLib
 		String rechrgeStatus1 = "Recharge successful";
 		String rechrgeStatus2 = driver.findElement(By.xpath("//android.view.ViewGroup[@index=0]/android.widget.TextView")).getText();
 
-		(driver).pressKeyCode(AndroidKeyCode.HOME);
-
 		Assert.assertEquals(rechrgeStatus2, rechrgeStatus1);
-
+		
+		if(rechrgeStatus1=="Recharge successful")
+		{	
+			//advanceReport
+			advanceReport.log(LogStatus.PASS, "recharge is successfull");
+		}
+		else
+		{	
+			//advanceReport
+			advanceReport.log(LogStatus.FAIL, "recharge is not successfull");
+		}
+		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		
+		//advance report
+		advanceReport.endTest();
+		
 		//for consideration
 
 		//click on the browse plans
@@ -621,8 +646,11 @@ public class Horoscope_baseLib
 	
 	public static void kundaliMatchHoroscope(AndroidDriver<WebElement> driver) throws Exception
 
-	{
-		
+	{			
+				//advance report
+				advanceReport.startTest("Performing the Kundali Match");	
+				
+				//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 				////excel sheet integration can be done in this code
 				WebDriverWait wait = new WebDriverWait(driver,5);
 				Kundali_match_PO kundali_match_PO=new Kundali_match_PO(driver);
@@ -641,20 +669,20 @@ public class Horoscope_baseLib
 				List<WebElement> dropdownPath = driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='13']/android.widget.TextView"));
 				handlingDynamicDropDown(driver, dropdownPath, "Gursarai");
 
-				kundali_match_PO.f_name.sendKeys("raman");
+				kundali_match_PO.f_name.sendKeys(Horoscope_GenericLib.readExcelData(10,2));
 				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				enterButton(driver);
 
-				kundali_match_PO.female_DOB_dd().sendKeys("17");
-				kundali_match_PO.female_DOB_mm().sendKeys("01");
-				kundali_match_PO.female_DOB_yyyy().sendKeys("1997");
-				kundali_match_PO.female_DOB_hr().sendKeys("11");
-				kundali_match_PO.female_DOB_min().sendKeys("34");
+				kundali_match_PO.female_DOB_dd().sendKeys(Horoscope_GenericLib.readExcelData(11,2));
+				kundali_match_PO.female_DOB_mm().sendKeys(Horoscope_GenericLib.readExcelData(11,3));
+				kundali_match_PO.female_DOB_yyyy().sendKeys(Horoscope_GenericLib.readExcelData(11,4));
+				kundali_match_PO.female_DOB_hr().sendKeys(Horoscope_GenericLib.readExcelData(12,2));
+				kundali_match_PO.female_DOB_min().sendKeys(Horoscope_GenericLib.readExcelData(12,3));
 
 				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 				nextButton(driver);
-				kundali_match_PO.f_cityname.sendKeys("gur");
+				kundali_match_PO.f_cityname.sendKeys(Horoscope_GenericLib.readExcelData(13,2));
 				wait.until(ExpectedConditions.elementToBeClickable(By.className("android.view.ViewGroup")));
 
 				List <WebElement> dropDownPathFemale=driver.findElements(By.xpath("//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='26']/android.widget.TextView"));
@@ -669,6 +697,7 @@ public class Horoscope_baseLib
 				(ExpectedConditions.visibilityOfElementLocated
 						(By.xpath("//android.view.ViewGroup")));
 				homeButton(driver);
+				advanceReport.endTest();
 	}
 
 
