@@ -38,6 +38,7 @@ public class Horoscope_GenericLib {
 	}
 	
 	//To read data from excel sheet
+	//Implementing the Data driven Framework
 	
 	public static String readExcelData(int rowNumber,int columnNumber) throws Exception 
 	{ 
@@ -54,8 +55,9 @@ public class Horoscope_GenericLib {
 			cellValue = cell.getStringCellValue();
 		
 		else if(cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum()== CellType.FORMULA)
-		{
-			cellValue = String.valueOf(cell.getNumericCellValue());
+		{	
+			//this will convert the value of Integer to String
+			cellValue = String.valueOf(Integer.valueOf((int) cell.getNumericCellValue()));
 			
 		}
 

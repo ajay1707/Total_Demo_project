@@ -20,5 +20,8 @@
 	<classpathentry kind="lib" path="D:/Selenium/Tools/Apache POI/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium/Tools/Apache POI/poi-3.17/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium/Tools/Apache POI/poi-3.17/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/Reports/XSLT Report/lib/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/Reports/XSLT Report/lib/SaxonLiaison.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Tools/extentreports-java-1.4/extentreports-java-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
